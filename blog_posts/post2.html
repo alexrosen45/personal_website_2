@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="icon" type="image/png" href="../images/icon.png">
+  </head>
+  <body>
+
+    <!-- header -->
+    <nav class = "navbar">
+        <div class = "container">
+          <a href = "../index.html" class = "navbar-brand">AR | home</a>
+          <div class = "navbar-nav">
+            <a href = "../index.html#projects">projects</a>
+            <a href = "../index.html#blog">blog</a>
+            <a href = "../index.html#about">about</a>
+          </div>
+        </div>
+      </nav>
+    <!-- end of header -->
+    
+    <!-- post -->
+    <section class = "post" id = "post">
+      <div class = "container">
+        <div class = "title">
+          <h2>Dogebot 1.0</h2>
+          <p>June 17, 2021</p>
+        </div>
+        <div>
+          <div class = "post-img">
+            <img src = "../images/blog/post2_2.png" alt = "">
+          </div>
+        </div>
+        <div class = "post">
+            <p>
+                Dogebot is the first somewhat functional trading bot that I have made. Every ten seconds it monitors for Elon Musk tweets that contain the keyword 
+                doge in order to buy and hold dogecoin for short periods of time. I have not actually connected the program to a crypto wallet yet because I first
+                need to figure out whether it actually makes money or not. For the time being, whenever Elon tweets about doge the bot will buy it instanly and hold
+                it for exactly 1 hour. After it sells, it resumes looking for tweets regarding doge and records the percent change in the price of doge during the 
+                holding time in a csv file. I am almost able to run it for 24 hours because the only issue left to fix is to extend the number of API requests I can
+                make continuously using tweepy (Twitter's API library). The project is currently running on a raspberry pi 4 in my room and I have surprisingly not
+                had any wireless internet connection issues. Now I just have to wait and see whether or not my idea works.
+              </p>
+              <p>
+                If I get poor results for percent changes during hypothetical holding times there is 1 potential flaw which can be address. The bot purchases dogecoin
+                for exactly 1hr after Elon tweets, but this is just an arbitrary time period that I selected. Dogebot 1.0 is more of a proof of concept that helped
+                me figure out how to build a crypto trading bot. The best approach to obtaining optimal return would be to setup an automated process for finding the 
+                best average holding time with the highest precent return after a tweet. For example, instead of recording data for the percent change in 1hr I could
+                do it for a range from 15min to 5hrs with 15min increments. If this was implemented I would also have to swap out the crypto price API I am using
+                provided by Coin Market Cap for something quicker and more time specific to retain accuracy. If the 1hr time period proves to be problematic, I plan
+                on including a solution to it in the 1.1 release.
+              </p>
+              <p>
+                Future features that will be added if the project ends up generating money will be connections to a crypto wallet and bank account along with a proper
+                interface for the program that could be through a section of this website. The code for Dogebot 1.0 can be found <a href="https://github.com/alexrosen45/dogebot1.0">here</a>.
+              </p>
+        </div>
+      </div>
+    </section>
+    <!-- end of post -->
+
+    <!-- footer -->
+    <footer>
+      <div class = "social-links">
+        <a href = "https://twitter.com/AlexRos27300998"><i class = "fab fa-twitter"></i></a>
+        <a href = "https://www.reddit.com/user/arosen45"><i class = "fab fa-reddit-alien"></i></a>
+        <a href = "https://github.com/alexrosen45"><i class = "fab fa-github"></i></a>
+        <a href = "https://www.linkedin.com/in/alex-rosen-7152281b7/"><i class = "fab fa-linkedin"></i></a>
+      </div>
+      <span>alexanderrosen45@gmail.com</span>
+    </footer>
+    <!-- end of footer -->
+  </body>
+</html>
