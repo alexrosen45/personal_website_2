@@ -171,15 +171,7 @@ header{
 .projects-item:hover img{
     transform: scale(1.2);
 }
-.projects-img span:first-of-type{
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 10px;
-    background: var(--exDark);
-    color: #fff;
-    padding: 0.25rem 1rem;
-}
+
 .projects-img span:last-of-type{
     position: absolute;
     z-index: 1;
@@ -264,6 +256,11 @@ header{
 .about{
     padding: 4.5rem 0;
 }
+.about-container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
 .about-text{
     margin: 2rem 0;
     color: var(--light_text_1);
@@ -272,6 +269,13 @@ header{
     font-size: 1.1rem;
     padding: 0.6rem 0;
     opacity: 0.8;
+}
+.about-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: 55%;
 }
 
 /* footer */
